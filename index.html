@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Panoram Interactif</title>
+</head>
+
+<style>
+
+    .img1{
+        width:1200px;
+        height: 280px;
+        position: absolute;
+        z-index: 10;
+    }
+    
+   
+    .container{
+        height: 300px;
+        width: 300px;
+        background-color: rgba(0, 0, 255, 0);
+    }
+    
+    .tooltip6 {
+        position: absolute;
+        background: rgba(51, 51, 51, 0.76);
+        /* border: 4px solid #666;*/
+        border-radius:30px;
+        width: 330px;
+        padding: 20px;
+        color: #f1f1f1;
+        font-size: 17px;
+        
+        top: 305px;
+        left: 248px;
+        /* display: none; */
+        opacity: 0;
+        pointer-events: none;
+        z-index:10;
+        
+        
+        
+        }
+        .tooltip6::after, .tooltip6::before {
+        content: "";
+        bottom: 100%;
+        left: 50%;
+        border: solid transparent;
+        height: 0;
+        width: 0;
+        position: absolute;
+        
+        }
+        .tooltip6::after {
+        border-bottom-color: rgba(51, 51, 51, 0.77);
+        border-width: 25px;
+        margin-left: -25px;
+        
+        }
+        .tooltip6::before {
+        /* border-bottom-color: #666;*/
+        border-width: 30px;
+        margin-left: -30px;
+        }
+        
+        .btn6 {
+        display: inline;
+        position: relative;
+        }
+        .btn6 img {
+        position: relative;
+        top: 25px;
+       
+        }
+        .btn6:hover .tooltip6{
+        /* display: block; */
+        pointer-events: all;
+        opacity: 1;
+        transition: all 0.4s ease;
+        }
+
+        button .buttonBlanch{
+            height: 45px;
+        }
+    
+        .buttonBlanch{
+            width: 80px;
+        height:20;
+        background: url("https://api.iconify.design/material-symbols:chat-info-outline-sharp.svg?color=%23ff0000");
+        position: absolute;
+        bottom: -155px;
+        left: 468px;
+        transform: translate(-50%, -50%);
+        color: var(--color1);
+        border: 2px solid var(--color1);
+        padding-bottom: 19px;
+        padding-left: 2px;
+        padding-right: 2px;
+        margin-left: 60px;
+        text-decoration: none;
+        background-color: #4e4b4b00;
+        color: rgb(2, 2, 2);
+        background-size: 26px;
+        background-position: 0px;
+        background-position-y: 38px;
+        background-repeat: no-repeat;
+        margin-left: 3px;
+        
+        display: inline-block;
+        margin-top: 3px;
+        font-size: 18px;
+        text-align:left;
+        border-radius: 0.5rem;
+        z-index: 20;
+    }
+    
+        
+    
+        a.contact-button3{
+            width: 120px;
+            background: url("distance.svg");
+            position: absolute;
+            top: 76%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--color1);
+            border: 2px solid var(--color1);
+            padding: 8px 15px;
+            margin-left: 70px;
+            text-decoration: none;
+            background-color: #fdf9f950;
+            
+            background-size: 28px;
+            background-position: 115px;
+            background-repeat: no-repeat;
+            
+            
+            display: inline-block;
+            margin-top: 50px;
+            font-size: 20px;
+            text-align:left;
+            border-radius: 0.5rem;
+        }
+    /*--------------------------------------------------------------------------*/
+        .tooltip10 {
+            position: absolute;
+            background: rgba(51, 51, 51, 0.76);
+            /* border: 4px solid #666;*/
+            border-radius:30px;
+            width: 330px;
+            padding: 20px;
+            color: #f1f1f1;
+            font-size: 17px;
+            
+            top: 304px;
+            left: 1px;
+            /* display: none; */
+            opacity: 0;
+            pointer-events: none;
+            z-index:10;
+            
+            
+            }
+            .tooltip10::after, .tooltip10::before {
+            content: "";
+            bottom: 100%;
+            left: 19%;
+            border: solid transparent;
+            height: 0;
+            width: 0;
+            position: absolute;
+            
+            }
+            .tooltip10::after {
+            border-bottom-color: rgba(51, 51, 51, 0.77);
+            border-width: 25px;
+            margin-left: -25px;
+            
+            }
+            .tooltip10::before {
+            /* border-bottom-color: #666;*/
+            border-width: 30px;
+            margin-left: -30px;
+            }
+            
+            .btn10 {
+                
+            display: inline;
+            position: relative;
+            }
+            .btn10 .img8 {
+            position: relative;
+            top: -403px;
+            
+            }
+            .btn10:hover .tooltip10{
+            /* display: block; */
+            pointer-events: all;
+            opacity: 1;
+            transition: all 0.4s ease;
+            }
+    
+            .buttonCard{
+                width: 180px;
+                background: url("https://api.iconify.design/material-symbols:chat-info-outline-sharp.svg?color=%23ff0000");
+                position: absolute;
+                bottom: -160px;
+                left: 88px;
+                transform: translate(-50%, -50%);
+                color: var(--color1);
+                border: 2px solid var(--color1);
+                padding: 3px 5px;
+                padding-bottom: 30px;
+                padding-right: 0px;
+               
+                text-decoration: none;
+                background-color: #4e4b4b00;
+                color: rgb(2, 2, 2);
+                background-size: 26px;
+                background-position: 85px;
+                background-position-y: 30px;
+                background-repeat: no-repeat;
+                margin-bottom: 3px;
+                margin-right: -5px;
+                display: inline-block;
+                margin-top: 5px;
+                font-size: 20px;
+                text-align:left;
+                border-radius: 0.5rem;
+                z-index: 20;
+            }
+        
+            a.contact-button2{
+                width: 120px;
+                background: url("distance.svg");
+                position: absolute;
+                top: 70%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: var(--color1);
+                border: 2px solid var(--color1);
+                padding: 8px 15px;
+                margin-left: 70px;
+                text-decoration: none;
+                background-color: #fdf9f950;
+                
+                background-size: 28px;
+                background-position: 111px;
+                background-repeat: no-repeat;
+                
+                
+                display: inline-block;
+                margin-top: 50px;
+                font-size: 20px;
+                text-align:left;
+                border-radius: 0.5rem;
+            }
+    
+    /*----------------------------------------------------------------------------------------*/
+    
+    .tooltip5 {
+    position: absolute;
+    background: rgba(51, 51, 51, 0.76);
+    /* border: 4px solid #666;*/
+    border-radius:30px;
+    width: 330px;
+    padding: 20px;
+    color: #f1f1f1;
+    font-size: 17px;
+    
+    top: 304px;
+    left: 77px;
+    /* display: none; */
+    opacity: 0;
+    pointer-events: none;
+    z-index:10;
+    
+    
+    }
+    .tooltip5::after, .tooltip5::before {
+    content: "";
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    
+    }
+    .tooltip5::after {
+    border-bottom-color: rgba(51, 51, 51, 0.77);
+    border-width: 25px;
+    margin-left: -25px;
+    
+    }
+    .tooltip5::before {
+    /* border-bottom-color: #666;*/
+    border-width: 30px;
+    margin-left: -30px;
+    }
+    
+    .btn5 {
+    display: inline;
+    position: relative;
+    }
+    .btn5 .img3 {
+    position: relative;
+    top: -50px;
+    width: 60px;
+    }
+    .btn5:hover .tooltip5{
+    /* display: block; */
+    pointer-events: all;
+    opacity: 1;
+    transition: all 0.4s ease;
+    }
+    
+    .buttonRenn{
+        width: 110px;
+        height: 60;
+        background: url("https://api.iconify.design/material-symbols:chat-info-outline-sharp.svg?color=%23ff0000");
+        position: absolute;
+        bottom: -200px;
+        left: 229px;
+        transform: translate(-50%, -50%);
+        color: var(--color1);
+        border: 2px solid var(--color1);
+        padding: 2px 5px;
+        padding-left: 2px;
+        padding-right: 2px;
+        margin-left: 60px;
+        text-decoration: none;
+        background-color: #4e4b4b00;
+        color: rgb(2, 2, 2);
+        background-size: 26px;
+        background-position: 80px;
+        background-position-y: -1px;
+        background-repeat: no-repeat;
+        margin-left: 3px;
+        
+        display: inline-block;
+        margin-top: 3px;
+        font-size: 18px;
+        text-align:left;
+        border-radius: 0.5rem;
+        z-index: 20;
+    }
+    
+    a.contact-button4{
+        width: 120px;
+        background: url("distance.svg");
+        position: absolute;
+        top: 76%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--color1);
+        border: 2px solid var(--color1);
+        padding: 8px 15px;
+        margin-left: 70px;
+        text-decoration: none;
+        background-color: #fdf9f950;
+        
+        background-size: 28px;
+        background-position: 115px;
+        background-repeat: no-repeat;
+        
+        
+        display: inline-block;
+        margin-top: 45px;
+        font-size: 20px;
+        text-align:left;
+        border-radius: 0.5rem;
+    }
+    
+    /*----------------------------------------------------------------------------------*/
+    
+    .tooltip1 {
+        position: absolute;
+        background: rgba(51, 51, 51, 0.76);
+        /* border: 4px solid #666;*/
+        border-radius:30px;
+        width: 330px;
+        padding: 20px;
+        color: #f1f1f1;
+        font-size: 17px;
+        
+        top:304px;
+        left: 104px;
+        /* display: none; */
+        opacity: 0;
+        pointer-events: none;
+        z-index:10;
+        
+        
+        }
+        .tooltip1::after, .tooltip5::before {
+        content: "";
+        bottom: 100%;
+        left: 50%;
+        border: solid transparent;
+        height: 0;
+        width: 0;
+        position: absolute;
+        
+        }
+        .tooltip1::after {
+        border-bottom-color: rgba(51, 51, 51, 0.77);
+        border-width: 25px;
+        margin-left: -25px;
+        
+        }
+        .tooltip1::before {
+        /* border-bottom-color: #666;*/
+        border-width: 30px;
+        margin-left: -30px;
+        }
+        
+        .btn1 {
+        display: inline;
+        position: relative;
+        }
+        .btn1 .img4 {
+        position: relative;
+        top: -98px;
+        width: 60px;
+        }
+        .btn1:hover .tooltip1{
+        /* display: block; */
+        pointer-events: all;
+        opacity: 1;
+        transition: all 0.4s ease;
+        }
+    
+        .buttonFa{
+            width: 110px;
+            height: 50px;
+            background: url("https://api.iconify.design/material-symbols:chat-info-outline-sharp.svg?color=%23ff0000");
+            position: absolute;
+            bottom: -92px;
+            left: 291px;
+            transform: translate(-50%, -50%);
+            color: var(--color1);
+            border: 2px solid var(--color1);
+            /*padding: 13px 55px;*/
+            /*margin-left: 70px;*/
+            padding-top: 3px;
+            padding-bottom: 20px;
+            
+            text-decoration: none;
+            background-color: #4e4b4b00;
+            color: rgb(2, 2, 2);
+            background-size: 25px;
+            background-position: 50px;
+            
+            background-position-y: 25px;
+            background-repeat: no-repeat;
+            
+            
+            display: inline-block;
+            /*margin-top: 50px;*/
+            font-size: 18px;
+            text-align:center;
+            border-radius: 0.5rem;
+            z-index: 20;
+        }
+    
+        /*----------------------------------------------------------------------------------*/
+    
+        .tooltip3 {
+            position: absolute;
+            background: rgba(51, 51, 51, 0.76);
+            /* border: 4px solid #666;*/
+            border-radius:30px;
+            width: 330px;
+            padding: 20px;
+            color: #f1f1f1;
+            font-size: 17px;
+            
+            top:304px;
+            left: 138px;
+            /* display: none; */
+            opacity: 0;
+            pointer-events: none;
+            z-index:10;
+            
+            
+            }
+            .tooltip3::after, .tooltip3::before {
+            content: "";
+            bottom: 100%;
+            left: 50%;
+            border: solid transparent;
+            height: 0;
+            width: 0;
+            position: absolute;
+            
+            }
+            .tooltip3::after {
+            border-bottom-color: rgba(51, 51, 51, 0.77);
+            border-width: 25px;
+            margin-left: -25px;
+            
+            }
+            .tooltip3::before {
+            /* border-bottom-color: #666;*/
+            border-width: 30px;
+            margin-left: -30px;
+            }
+            
+            .btn3 {
+            display: inline;
+            position: relative;
+            }
+            .btn3 .img5 {
+            position: relative;
+            top: -128px;
+            width: 60px;
+            }
+            .btn3:hover .tooltip3{
+            /* display: block; */
+            pointer-events: all;
+            opacity: 1;
+            transition: all 0.4s ease;
+            }
+    
+            .buttonSals{
+                width: 100px;
+                height: 60px;
+                background: url("https://api.iconify.design/material-symbols:chat-info-outline-sharp.svg?color=%23ff0000");
+                position: absolute;
+                bottom: -179px;
+                left: 356px;
+                transform: translate(-50%, -50%);
+                color: var(--color1);
+                border: 2px solid var(--color1);
+                /*padding: 13px 55px;*/
+                /*margin-left: 70px;*/
+                padding-top: 3px;
+                text-decoration: none;
+                background-color: #4e4b4b00;
+                color: rgb(2, 2, 2);
+                background-size: 25px;
+                background-position: 10px;
+                
+                background-position-y: 39px;
+                background-repeat: no-repeat;
+                
+                
+                display: inline-block;
+                /*margin-top: 50px;*/
+                font-size: 18px;
+                text-align:center;
+                padding-top: -10px;
+                border-radius: 0.5rem;
+                z-index: 20;
+            }
+    
+            a.contact-button5{
+                width: 120px;
+                background: url("distance.svg");
+                position: absolute;
+                top: 76%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: var(--color1);
+                border: 2px solid var(--color1);
+                padding: 8px 15px;
+                margin-left: 70px;
+                text-decoration: none;
+                background-color: #fdf9f950;
+                
+                background-size: 28px;
+                background-position: 115px;
+                background-repeat: no-repeat;
+                
+                
+                display: inline-block;
+                margin-top: 38px;
+                font-size: 20px;
+                text-align:left;
+                border-radius: 0.5rem;
+            }
+            /*--------------------------------------------------------------------------------*/
+    
+            .tooltip2 {
+                position: absolute;
+                background: rgba(51, 51, 51, 0.76);
+                /* border: 4px solid #666;*/
+                border-radius:30px;
+                width: 330px;
+                padding: 20px;
+                color: #f1f1f1;
+                font-size: 17px;
+                
+                top: 304px;
+                left: 196px;
+                /* display: none; */
+                opacity: 0;
+                pointer-events: none;
+                z-index:10;
+                
+                
+                }
+                .tooltip2::after, .tooltip2::before {
+                content: "";
+                bottom: 100%;
+                left: 50%;
+                border: solid transparent;
+                height: 0;
+                width: 0;
+                position: absolute;
+                
+                }
+                .tooltip2::after {
+                border-bottom-color: rgba(51, 51, 51, 0.77);
+                border-width: 25px;
+                margin-left: 9px;
+                
+                }
+                .tooltip2::before {
+                /* border-bottom-color: #666;*/
+                border-width: 30px;
+                margin-left: -30px;
+                }
+                
+                .btn2 {
+                display: inline;
+                position: relative;
+                }
+                .btn2 .img6 {
+                position: relative;
+                top: -228px;
+                width: 70px;
+                }
+                .btn2:hover .tooltip2{
+                /* display: block; */
+                pointer-events: all;
+                opacity: 1;
+                transition: all 0.4s ease;
+                }
+    
+                .buttonCouiz{
+                    width: 201px;
+                    height: 65px;
+                    background: url("https://api.iconify.design/material-symbols:chat-info-outline-sharp.svg?color=%23ff0000");
+                    position: absolute;
+                    bottom: -79px;
+                    left: 450px;
+                    transform: translate(-50%, -50%);
+                    color: var(--color1);
+                    border: 2px solid var(--color1);
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    padding-top: 2px;
+                    text-decoration: none;
+                    background-color: #4e4b4b00;
+                    color: rgb(2, 2, 2);
+                    background-size: 25px;
+                    background-position: 51px;
+                    
+                    background-position-y: 43px;
+                    background-repeat: no-repeat;
+                    
+                    
+                    display: inline-block;
+                    /*margin-top: 50px;*/
+                    font-size: 18px;
+                    text-align:center;
+                    border-radius: 0.5rem;
+                    z-index: 20;
+                }
+    
+                /*---------------------------------------------------------------------------------------*/
+    
+                .tooltip4 {
+                    position: absolute;
+                    background: rgba(51, 51, 51, 0.76);
+                    /* border: 4px solid #666;*/
+                    border-radius:30px;
+                    width: 330px;
+                    padding: 20px;
+                    color: #f1f1f1;
+                    font-size: 17px;
+                    
+                    top: 304px;
+                    left: 310px;
+                    /* display: none; */
+                    opacity: 0;
+                    pointer-events: none;
+                    z-index:10;
+                    
+                    
+                    }
+                    .tooltip4::after, .tooltip4::before {
+                    content: "";
+                    bottom: 100%;
+                    left: 25%;
+                    border: solid transparent;
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    
+                    }
+                    .tooltip4::after {
+                    border-bottom-color: rgba(51, 51, 51, 0.77);
+                    border-width: 25px;
+                    margin-left: 59px;
+                    
+                    }
+                    .tooltip4::before {
+                    /* border-bottom-color: #666;*/
+                    border-width: 30px;
+                    margin-left: -30px;
+                    }
+                    
+                    .btn4 {
+                    display: inline;
+                    position: relative;
+                    }
+                    .btn4 .img7 {
+                    position: relative;
+                    top: -328px;
+                    width: 70px;
+                    }
+                    .btn4:hover .tooltip4{
+                    /* display: block; */
+                    pointer-events: all;
+                    opacity: 1;
+                    transition: all 0.4s ease;
+                    }
+    
+                    .buttonMont{
+                        width: 110px;
+                        height: 93px;
+                        background: url("https://api.iconify.design/material-symbols:chat-info-outline-sharp.svg?color=%23ff0000");
+                        position: absolute;
+                        bottom: -260px;
+                        left: 528px;
+                        transform: translate(-50%, -50%);
+                        color: var(--color1);
+                        border: 2px solid var(--color1);
+                        margin-left: 10px;
+                        padding-bottom: 1px;
+                        padding-top: 1;
+                        text-decoration: none;
+                        background-color: #4e4b4b00;
+                        color: rgb(2, 2, 2);
+                        background-size: 26px;
+                        background-position: 0px;
+                        
+                        background-position-y: 0px;
+                        background-repeat: no-repeat;
+                        
+                        
+                        display: inline-block;
+                       
+                        font-size: 18px;
+                        text-align:center;
+                        border-radius: 0.5rem;
+                        z-index: 20;
+                    }
+    
+    /*---------------------------------------------------------------------------------------*/
+    
+    .tooltip11 {
+        position: absolute;
+        background: rgba(51, 51, 51, 0.76);
+        /* border: 4px solid #666;*/
+        border-radius:30px;
+        width: 330px;
+        padding: 20px;
+        color: #f1f1f1;
+        font-size: 17px;
+        
+        top: 304px;
+        left: 410px;
+        /* display: none; */
+        opacity: 0;
+        pointer-events: none;
+        z-index:10;
+        
+        
+        }
+        .tooltip11::after, .tooltip11::before {
+        content: "";
+        bottom: 100%;
+        left: 25%;
+        border: solid transparent;
+        height: 0;
+        width: 0;
+        position: absolute;
+        
+        }
+        .tooltip11::after {
+        border-bottom-color: rgba(51, 51, 51, 0.77);
+        border-width: 25px;
+        margin-left: 59px;
+        
+        }
+        .tooltip11::before {
+        /* border-bottom-color: #666;*/
+        border-width: 30px;
+        margin-left: -30px;
+        }
+        
+        .btn5 {
+        display: inline;
+        position: relative;
+        }
+        .btn5 .img7 {
+        position: relative;
+        top: -328px;
+        width: 70px;
+        }
+        .btn5:hover .tooltip11{
+        /* display: block; */
+        pointer-events: all;
+        opacity: 1;
+        transition: all 0.4s ease;
+        }
+
+        .buttonDunet{
+            width: 80px;
+            height: 64px;
+            background: url("https://api.iconify.design/material-symbols:chat-info-outline-sharp.svg?color=%23ff0000");
+            position: absolute;
+            bottom: -133px;
+            left: 598px;
+            transform: translate(-50%, -50%);
+            color: var(--color1);
+            border: 2px solid var(--color1);
+            margin-left: 10px;
+            padding-bottom: 1px;
+            padding-top: -10px;
+            text-decoration: none;
+            background-color: #4e4b4b00;
+            color: rgb(2, 2, 2);
+            background-size: 26px;
+            background-position: 17px;
+            
+            background-position-y: 40px;
+            background-repeat: no-repeat;
+            
+            
+            display: inline-block;
+           
+            font-size: 18px;
+            text-align:center;
+            border-radius: 0.5rem;
+            z-index: 20;
+        }
+      /*---------------------------------------------------------------------------------------*/
+    
+    .tooltip12 {
+        position: absolute;
+        background: rgba(51, 51, 51, 0.76);
+        /* border: 4px solid #666;*/
+        border-radius:30px;
+        width: 330px;
+        padding: 20px;
+        color: #f1f1f1;
+        font-size: 17px;
+        
+        top: 304px;
+        left: 486px;
+        /* display: none; */
+        opacity: 0;
+        pointer-events: none;
+        z-index:10;
+        
+        
+        }
+        .tooltip12::after, .tooltip12::before {
+        content: "";
+        bottom: 100%;
+        left: 25%;
+        border: solid transparent;
+        height: 0;
+        width: 0;
+        position: absolute;
+        
+        }
+        .tooltip12::after {
+        border-bottom-color: rgba(51, 51, 51, 0.77);
+        border-width: 25px;
+        margin-left: 59px;
+        
+        }
+        .tooltip12::before {
+        /* border-bottom-color: #666;*/
+        border-width: 30px;
+        margin-left: -30px;
+        }
+        
+        .btn11 {
+        display: inline;
+        position: relative;
+        }
+        .btn11 .img7 {
+        position: relative;
+        top: -328px;
+        width: 70px;
+        }
+        .btn11:hover .tooltip12{
+        /* display: block; */
+        pointer-events: all;
+        opacity: 1;
+        transition: all 0.4s ease;
+        }
+
+        .buttonRiou{
+            width: 100px;
+            height: 50px;
+            background: url("https://api.iconify.design/material-symbols:chat-info-outline-sharp.svg?color=%23ff0000");
+            position: absolute;
+            bottom: -168px;
+            left: 683px;
+            transform: translate(-50%, -50%);
+            color: var(--color1);
+            border: 2px solid var(--color1);
+            margin-left: 10px;
+            padding-bottom: 1px;
+            padding-bottom: 30px;
+            text-decoration: none;
+            background-color: #4e4b4b00;
+            color: rgb(2, 2, 2);
+            background-size: 26px;
+            background-position: 17px;
+            
+            background-position-y: 24px;
+            background-repeat: no-repeat;
+            
+            
+            display: inline-block;
+           
+            font-size: 18px;
+            text-align:center;
+            border-radius: 0.5rem;
+            z-index: 20;
+        }
+   /*---------------------------------------------------------------------------------------*/
+    
+   .tooltip13 {
+    position: absolute;
+    background: rgba(51, 51, 51, 0.76);
+    /* border: 4px solid #666;*/
+    border-radius:30px;
+    width: 330px;
+    padding: 20px;
+    color: #f1f1f1;
+    font-size: 17px;
+    
+    top: 304px;
+    left: 563px;
+    /* display: none; */
+    opacity: 0;
+    pointer-events: none;
+    z-index:10;
+    
+    
+    }
+    .tooltip13::after, .tooltip13::before {
+    content: "";
+    bottom: 100%;
+    left: 25%;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    
+    }
+    .tooltip13::after {
+    border-bottom-color: rgba(51, 51, 51, 0.77);
+    border-width: 25px;
+    margin-left: 59px;
+    
+    }
+    .tooltip13::before {
+    /* border-bottom-color: #666;*/
+    border-width: 30px;
+    margin-left: -30px;
+    }
+    
+    .btn12 {
+    display: inline;
+    position: relative;
+    }
+    .btn2 .img7 {
+    position: relative;
+    top: -328px;
+    width: 70px;
+    }
+    .btn12:hover .tooltip13{
+    /* display: block; */
+    pointer-events: all;
+    opacity: 1;
+    transition: all 0.4s ease;
+    }
+
+    .buttonCrouzet{
+        width: 130px;
+        height: 20px;
+        background: url("https://api.iconify.design/material-symbols:chat-info-outline-sharp.svg?color=%23ff0000");
+        position: absolute;
+        bottom: -103px;
+        left: 793px;
+        transform: translate(-50%, -50%);
+        color: var(--color1);
+        border: 2px solid var(--color1);
+        margin-left: 10px;
+        padding-bottom: 1px;
+        padding-bottom: 30px;
+        text-decoration: none;
+        background-color: #4e4b4b00;
+        color: rgb(2, 2, 2);
+        background-size: 26px;
+        background-position: 0px;
+        
+        background-position-y: 0px;
+        background-repeat: no-repeat;
+        
+        
+        display: inline-block;
+       
+        font-size: 18px;
+        text-align:center;
+        border-radius: 0.5rem;
+        z-index: 20;
+    }
+
+
+</style>
+
+<header>
+    <a href="https://codenature.fr/"><img src="Projet111.png" style="width: 60px; margin-left:5px ;"></a>
+    <a href=""><img src="https://www.viviez.fr/uploads/sites/105/elementor/thumbs/logo-viviez-v2-e1684227767910-q6jinq8pninithhxba0407xd499f3dwmxq53o1o3bq.png" title="" alt="logo viviez v2" loading="lazy" style="width: 150px; margin-left:5px ; margin-top: -100px;"></a>
+    
+
+</header>
+
+
+
+   
+
+<body>
+
+    
+    <div class="container">
+        <img class="img1" src="photok1.jpg" alt="">
+
+            <div class="btn6" >
+                <button class="buttonBlanch" type="button">Montagne Pelée</button>
+                    <div class="tooltip6" >
+                        <a><span><img src ="https://idata.over-blog.com/0/23/09/69/chateau/11-30-34-48/11/blanchefort/blanchefort-03.jpg" alt="" style="width:150px; height:110px; padding-left:20px; margin-bottom: 40px; float: right; "/>
+                            <p>Elle n'est pas facile à trouver cette ruine. Si vous ne connaissez pas son existence ou si vous n'avez pas une carte précise, vous passerez devant sans lever la tête.
+
+                            Le site médiéval est sur un pic, sur la route entre Rennes les Bains, en direction de Peyrepertuse. Plus exactement au Sud-Est de Cassaignes, sur la butte proche du hameau de Pachevan.
+                        
+                            Cette "beauté de pierres" est dans le "triangle des châteaux Cathare".</p></br></br><a href="https://chateauruine.fr/article-2386837.html"  style="text-decoration-color: blanchedalmond; color: blanchedalmond;"> ICI: Historique</span></a><a class="contact-button3" href="https://goo.gl/maps/RwLtv3m9u8UTAuu39">Itinéraire</a>
+            </div>        
+                    </div>
+
+                    <div class="btn10">
+                        <button class="buttonCard" type="button">Puech de Liergues</button>
+                            <div class="tooltip10">
+                                 <a><span><img src ="https://i.pinimg.com/736x/52/0a/8e/520a8e19a317f0e58bacc7f939370ed2--the-ruins.jpg"alt="" style="width:190px; height:110px; padding-left:3px; margin-top: -10px; float: right; "/>
+                                    <br>Le Cardou représentait déjà une montagne mythique ou les spéculations des chercheurs allaient de bon train. Tantôt cache trésor, tantôt cache aux tombeaux, les hypothèses et les rumeurs ne manquent pas autour du Pech. Pourquoi le Cardou fascine-t-il autant ?...</br></br><br><a href="http://www.rennes-le-chateau-archive.com/cardou_1.php" style="text-decoration-color: blanchedalmond; color: blanchedalmond;"> ICI: Historique</span></a><a class="contact-button2" href="https://goo.gl/maps/w8wTWgQY8BEjJPPT6">Itinéraire</a> 
+        
+                            </div>
+                    </div>
+            
+                    <div class="btn5">
+                        <button class="buttonRenn" type="button">Maisons ouvrières</button>
+                            <div class="tooltip5">
+                                <a><span><img src ="20231023_120521~2.jpg" alt="" style="width:190px; height:100px; padding-left: 20px; margin-top: 10px; float: right; "/>
+                                     Perché sur sa colline au cœur de la Haute Vallée de l’Aude, le petit village de Rennes-le-Château n’a encore rien dévoilé de ses mystères…
+                                     Découvrez ce lieu hors du temps et l’étonnante histoire de Bérenger Saunière, modeste curé de campagne qui transforma à jamais le destin de cette petite commune sans histoire..</br></br><a href="https://www.rennes-le-chateau.fr/" style="text-decoration-color: blanchedalmond; color: blanchedalmond;"> ICI: Historique</span></a><a class="contact-button4" href="https://goo.gl/maps/DPfXHLWnYowzXSQG8">Itinéraire</a>
+                    </div>
+                            </div>
+          
+                            <div class="btn1">
+                                <button class="buttonFa" type="button">Viviez-Pont</button>
+                                    <div class="tooltip1">
+                                        <a><span><img src ="https://idata.over-blog.com/0/23/09/69/chateau/11-30-34-48/11/fa/11-fa-05.jpg"alt="" style="width:190px; height:130px; padding-left: 20px; margin-top: 10px; float: right; "/>
+                                            Le hameau de Fa situé dans le département de l’Aude et compte 373 habitants (2013) appelés les Fanols .
+                                            La commune possède une tour Wisigothe , restes d’un château . Le rempart extérieur très abîmé et parfois inexistant ,  a l’origine ce ne devait pas être le château d’un seigneur mais d’une garnison , cela explique l’absence de texte historique<br><br><a href="https://visitesvirtuelles.123.fr/fa/" style="text-decoration-color: blanchedalmond; color: blanchedalmond;"> ICI: Visite virtuelle</span></a><a class="contact-button4" href="https://goo.gl/maps/mu4q7iFW8mUiJMvb9">Itinéraire</a> 
+                                    </div>
+                                                    
+                            </div>
+                    
+                            <div class="btn3">
+                                <button class="buttonSals" type="button">Décazeville</button><!--sals-->
+                                   <div class="tooltip3">
+                                       <a><span><img src ="https://www.eau-salee-sougraigne.fr/images/source-entiere.jpg" alt="" style="width:190px; height:110px; padding-left: 20px; margin-top: 10px; float: right; "/>
+                                           Ce sont plusieurs filets d’eau salée qui lui donnent naissance. Ils s’échappent du terrain salifère au sommet d'une petite vallée orientée Est-Ouest.
+                                            Ces sources salées reçoivent rapidement des griffons d'eau douce issus des vallons voisins, l’ensemble forme la Sals.<br><br><a href="https://www.eau-salee-sougraigne.fr/index.php/le-domaine/la-sals" style="text-decoration-color: blanchedalmond; color: blanchedalmond;"> ICI: Historique</span></a><a class="contact-button5" href="https://goo.gl/maps/WGuWQg5UKDptdxcn9">Itinéraire</a>
+                                   </div>
+                           </div>
+                           <div class="btn2">
+                            <button class="buttonCouiz" type="button">Usine la vieille Montagne</button> <!--couiza-->
+                                <div class="tooltip2">
+                                    <a><span><img src ="https://upload.wikimedia.org/wikipedia/commons/7/7b/CHATEAU_DE_COUIZA_AUDE_-_CHATEAU_DES_DUCS_DE_JOYEUSES.jpg" alt="" style="width:170px; height:100px; padding-left:10px; margin-top: 5px; float: right; "/>
+                                        Couiza est situé à l’embouchure de l’Aude et de la Salz, au coeur de la Haute Vallée de l’Aude et au carrefour du pays Cathare. C’est une petit ville dynamique riche en patrimoine naturel et historique...</br></br><br><a href="https://www.limouxin-tourisme.com/decouvrir/culture-histoire-et-legende/des-villages-des-histoires/nos-villages/couiza/" style="text-decoration-color: blanchedalmond; color: blanchedalmond;"> ICI: Historique</span></a><a class="contact-button2" href="https://goo.gl/maps/cqPcuZzcwxGvHM6c6">Itinéraire</a>
+                        
+                                </div>
+                        </div>
+
+                        <div class="btn4">
+                            <button class="buttonMont" type="button">Village de la Ramier</button>  <!--montazels-->
+                                <div class="tooltip4">
+                                    <a><span><img src ="Montazels.jpg" alt="" style="width:200px; height:130px; padding-left:10px; margin-top: 10px;float: right; "/>
+                                         Elle appartient à l'unité urbaine d'Espéraza et fait partie de l'aire d'attraction de Limoux. Ses habitants sont appelés les Montazelois ou Montazeloises.
+                                         Le patrimoine architectural de la commune comprend un immeuble protégé au titre des monuments historiques : la Fontaine, inscrite en 1951.</br></br><a href="https://fr.wikipedia.org/wiki/Montazels" style="text-decoration-color: blanchedalmond; color: blanchedalmond;"> ICI: Historique</span></a><a class="contact-button4" href="https://goo.gl/maps/UcG1KjuugcTnLHuT7">Itinéraire</a>
+                                </div>
+                        </div>
+                        <div class="btn5">
+                            <button class="buttonDunet" type="button">Dunet</button>  <!--Dunet-->
+                                <div class="tooltip11">
+                                    <a><span><img src ="Montazels.jpg" alt="" style="width:200px; height:130px; padding-left:10px; margin-top: 10px;float: right; "/>
+                                         Elle appartient à l'unité urbaine d'Espéraza et fait partie de l'aire d'attraction de Limoux. Ses habitants sont appelés les Montazelois ou Montazeloises.
+                                         Le patrimoine architectural de la commune comprend un immeuble protégé au titre des monuments historiques : la Fontaine, inscrite en 1951.</br></br><a href="https://fr.wikipedia.org/wiki/Montazels" style="text-decoration-color: blanchedalmond; color: blanchedalmond;"> ICI: Historique</span></a><a class="contact-button4" href="https://goo.gl/maps/UcG1KjuugcTnLHuT7">Itinéraire</a>
+                                </div>
+                        </div>
+                        <div class="btn11">
+                            <button class="buttonRiou" type="button">Riou-Viou</button>  <!--Dunet-->
+                                <div class="tooltip12">
+                                    <a><span><img src ="Montazels.jpg" alt="" style="width:200px; height:130px; padding-left:10px; margin-top: 10px;float: right; "/>
+                                         Elle appartient à l'unité urbaine d'Espéraza et fait partie de l'aire d'attraction de Limoux. Ses habitants sont appelés les Montazelois ou Montazeloises.
+                                         Le patrimoine architectural de la commune comprend un immeuble protégé au titre des monuments historiques : la Fontaine, inscrite en 1951.</br></br><a href="https://fr.wikipedia.org/wiki/Montazels" style="text-decoration-color: blanchedalmond; color: blanchedalmond;"> ICI: Historique</span></a><a class="contact-button4" href="https://goo.gl/maps/UcG1KjuugcTnLHuT7">Itinéraire</a>
+                                </div>
+                        </div>
+                        <div class="btn12">
+                            <button class="buttonCrouzet" type="button">Crouzet</button>  <!--Dunet-->
+                                <div class="tooltip13">
+                                    <a><span><img src ="Montazels.jpg" alt="" style="width:200px; height:130px; padding-left:10px; margin-top: 10px;float: right; "/>
+                                         Elle appartient à l'unité urbaine d'Espéraza et fait partie de l'aire d'attraction de Limoux. Ses habitants sont appelés les Montazelois ou Montazeloises.
+                                         Le patrimoine architectural de la commune comprend un immeuble protégé au titre des monuments historiques : la Fontaine, inscrite en 1951.</br></br><a href="https://fr.wikipedia.org/wiki/Montazels" style="text-decoration-color: blanchedalmond; color: blanchedalmond;"> ICI: Historique</span></a><a class="contact-button4" href="https://goo.gl/maps/UcG1KjuugcTnLHuT7">Itinéraire</a>
+                                </div>
+                        </div>
+
+</body>
+</html>
